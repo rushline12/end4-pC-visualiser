@@ -1,0 +1,55 @@
+{
+  "name": "Desktop Visualizer",
+  "description": "Full-width audio spectrum visualizer across the bottom of the screen ported from end4-pC.",
+  "version": "1.0.0",
+  "author": "midplays09",
+  "icon": "graphic_eq",
+  "category": "Media",
+  "component": "VisualizerWidget.qml",
+  "defaultWidth": 1920,
+  "defaultHeight": 240,
+
+  "configDefaults": {
+    "clickthrough": true,
+    "barWidth": 4,
+    "barSpacing": 8,
+    "maxBarHeight": 220,
+    "smoothingDuration": 150
+  },
+
+  "configSchema": {
+    "clickthrough": {
+      "type": "bool",
+      "label": "Click-through (transparent to mouse)",
+      "default": true
+    },
+    "barWidth": {
+      "type": "int",
+      "label": "Bar width (px)",
+      "default": 4,
+      "min": 1,
+      "max": 20
+    },
+    "barSpacing": {
+      "type": "int",
+      "label": "Bar spacing (px)",
+      "default": 8,
+      "min": 0,
+      "max": 30
+    },
+    "maxBarHeight": {
+      "type": "int",
+      "label": "Max bar height (px)",
+      "default": 220,
+      "min": 50,
+      "max": 500
+    },
+    "smoothingDuration": {
+      "type": "int",
+      "label": "Smoothing duration (ms)",
+      "default": 150,
+      "min": 50,
+      "max": 500
+    }
+  }
+}
