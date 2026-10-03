@@ -108,6 +108,9 @@ AbstractBackgroundWidget {
     y: isPreview ? 0 : (screenHeight - height)
     draggable: false
 
+    // Full-width widget: opt out of the 0.85 lock-animation shrink
+    scale: _effectiveInstanceScale * (Config.options.background.widgets.widgetsScale ?? 1.0) * lifecycleScale
+
     Row {
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
